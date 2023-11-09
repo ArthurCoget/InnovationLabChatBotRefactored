@@ -1,0 +1,29 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: give flights anytime the user give flight request
+  steps:
+  - intent: flight_data
+  - action: utter_looking_flights
+  - action: action_get_flights
+
+- rule: give timezones anytime the user give timezone request
+  steps:
+    - intent: timezones
+    - action: utter_timezone_lookingup
+    - action: action_find_timezone
+- rule: give timezone info anytime the user ask for it
+  steps:
+    - intent: find_time_zone
+    - action: utter_timezone_search_format

@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: Greetings_info_bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: capabilities
+  - action: utter_capabilities
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Greetings_info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: capabilities
+  - action: utter_capabilities
+
+- story: info_help_looking_for_flights
+  steps:
+  - intent: capabilities
+  - action: utter_capabilities
+  - intent: looking_flights
+  - action: utter_flight_format
+  - intent: flight_data
+  - action: utter_looking_flights
+  - action: action_get_flights
+
+- story: help_looking_for_flights
+  steps:
+  - intent: looking_flights
+  - action: utter_flight_format
+  - intent: flight_data
+  - action: utter_looking_flights
+  - action: action_get_flights
+
+- story: info_finding_timezones
+  steps: 
+    - intent: capabilities
+    - action: utter_capabilities
+    - intent: find_time_zone
+    - action: utter_timezone_search_format
+    - intent: timezones
+    - action: utter_timezone_lookingup
+    - action: action_find_timezone
+
+- story: finding_timezones
+  steps: 
+    - intent: find_time_zone
+    - action: utter_timezone_search_format
+    - intent: timezones
+    - action: utter_timezone_lookingup
+    - action: action_find_timezone

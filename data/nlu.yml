@@ -1,0 +1,211 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: capabilities
+  examples: |
+    - What can I ask you?
+    - What can you do?
+    - What are you capable off?
+    - Things I can ask you?
+    - Actions you can do?
+    - What topics are suitable for discussion with you?
+    - What kind of inquiries can I make?
+    - What capabilities do you possess?
+    - In what areas can I seek assistance from you?
+    - What functionalities are within your scope?
+    - what can you do?
+- intent: looking_flights
+  examples: |
+    - Can you assist me in finding affordable flight tickets?
+    - I need help booking a flight, can you provide information?
+    - I'm searching for flight options, could you help me out?
+    - I'm planning a trip and need assistance with flight details.
+    - Looking for support in booking my upcoming flight, can you help?
+    - Could you guide me through the process of booking a flight?
+    - I'm in need of information on available flights, can you provide guidance?
+    - I'd like some help finding suitable flight options, can you assist me?
+    - Seeking assistance in booking a flight, can you provide support?
+    - Can you guide me through the process of finding and booking a flight?
+    - help me with flights tickets
+    - help me with flights
+    - help with flights
+- intent: flight_data
+  examples: |
+    - Departure: [Los Angeles](start_place) arrival: [Paris](goto_place). From: [2023-11-15](departure_date) to: [2023-11-30](return_date)
+    - Departure: [New York](start_place) arrival: [London](goto_place). From: [2023-12-12](departure_date) to: [2023-12-30](return_date)
+    - Departure: [Tokyo](start_place) arrival: [Sydney](goto_place). From: [2023-12-05](departure_date) to: [2023-12-20](return_date)
+    - Departure: [Miami](start_place) arrival: [Rio de Janeiro](goto_place). From: [2023-11-20](departure_date) to: [2023-12-05](return_date)
+    - Departure: [San Francisco](start_place) arrival: [Dubai](goto_place). From: [2023-11-25](departure_date) to: [2023-12-10](return_date)
+    - Departure: [Chicago](start_place) arrival: [Berlin](goto_place). From: [2023-12-01](departure_date) to: [2023-12-15](return_date)
+    - Departure: [Sydney](start_place) arrival: [Tokyo](goto_place). From: [2023-11-18](departure_date) to: [2023-12-03](return_date)
+    - Departure: [Toronto](start_place) arrival: [Amsterdam](goto_place). From: [2023-12-08](departure_date) to: [2023-12-23](return_date)
+    - Departure: [Barcelona](start_place) arrival: [New York](goto_place). From: [2023-11-28](departure_date) to: [2023-12-13](return_date)
+    - Departure: [Singapore](start_place) arrival: [Bangkok](goto_place). From: [2023-12-15](departure_date) to: [2023-12-30](return_date)
+    - Departure: [Los Angeles](start_place) arrival: [Paris](goto_place). From: [2023-11-15](departure_date) to: [2023-11-30](return_date)
+
+- intent: find_time_zone
+  examples: |
+    - can you tell me the timezone?
+    - could you tell me the timezone?
+    - i need you to find a timezone
+    - can you find me a timezone?
+    - what timezone are we in?
+    - Can you provide me with the current timezone?
+    - Could you inform me about the current timezone?
+    - I require your assistance in locating a timezone.
+    - Can you help me find information about a specific timezone?
+    - Do you have the capability to tell me the current time?
+- intent: timezones
+  examples: |
+    - Timezone: [North America/New York](target_timezone)
+    - Timezone: [North America/Los Angeles](target_timezone)
+    - Timezone: [Europe/London](target_timezone)
+    - Timezone: [Europe/Paris](target_timezone)
+    - Timezone: [Asia/Tokyo](target_timezone)
+    - Timezone: [Australia/Sydney](target_timezone)
+    - Timezone: [Asia/Dubai](target_timezone)
+    - Timezone: [Asia/Hong Kong](target_timezone)
+    - Timezone: [Europe/Rome](target_timezone)
+    - Timezone: [Europe/Madrid](target_timezone)
+    - Timezone: [North America/Toronto](target_timezone)
+    - Timezone: [Asia/Singapore](target_timezone)
+    - Timezone: [Asia/Bangkok](target_timezone)
+    - Timezone: [Europe/Berlin](target_timezone)
+    - Timezone: [Europe/Istanbul](target_timezone)
+    - Timezone: [Asia/Mumbai](target_timezone)
+    - Timezone: [South America/Rio de Janeiro](target_timezone)
+    - Timezone: [Europe/Amsterdam](target_timezone)
+    - Timezone: [Asia/Seoul](target_timezone)
+    - Timezone: [North America/Mexico City](target_timezone)
+    - Timezone: [Europe/Vienna](target_timezone)
+    - Timezone: [Africa/Cairo](target_timezone)
+    - Timezone: [Europe/Prague](target_timezone)
+    - Timezone: [Asia/Shanghai](target_timezone)
+    - Timezone: [Europe/Moscow](target_timezone)
+    - Timezone: [Europe/Dublin](target_timezone)
+    - Timezone: [Europe/Stockholm](target_timezone)
+    - Timezone: [Europe/Athens](target_timezone)
+    - Timezone: [Europe/Copenhagen](target_timezone)
+    - Timezone: [Europe/Helsinki](target_timezone)
+    - Timezone: [Europe/Oslo](target_timezone)
+    - Timezone: [Europe/Warsaw](target_timezone)
+    - Timezone: [Europe/Lisbon](target_timezone)
+    - Timezone: [Europe/Budapest](target_timezone)
+    - Timezone: [Asia/Beijing](target_timezone)
+    - Timezone: [Asia/New Delhi](target_timezone)
+    - Timezone: [Asia/Bangalore](target_timezone)
+    - Timezone: [Europe/Edinburgh](target_timezone)
+    - Timezone: [Europe/Zurich](target_timezone)
+    - Timezone: [Europe/Geneva](target_timezone)
+    - Timezone: [Asia/Kuala Lumpur](target_timezone)
+    - Timezone: [Pacific/Auckland](target_timezone)
+    - Timezone: [Pacific/Wellington](target_timezone)
+    - Timezone: [South America/Sao Paulo](target_timezone)
+    - Timezone: [Asia/Riyadh](target_timezone)
+    - Timezone: [Asia/Jerusalem](target_timezone)
+    - Timezone: [Asia/Amman](target_timezone)
+    - Timezone: [Africa/Nairobi](target_timezone)
+    - Timezone: [World/Timestamps](target_timezone)
+
+- intent: cities
+  examples: |
+    - City: [Tokyo](city_name)
+    - City: [Delhi](city_name)
+    - City: [Shanghai](city_name)
+    - City: [São Paulo](city_name)
+    - City: [Mumbai](city_name)
+    - City: [Mexico City](city_name)
+    - City: [Beijing](city_name)
+    - City: [Osaka](city_name)
+    - City: [Cairo](city_name)
+    - City: [New York](city_name)
+    - City: [Chongqing](city_name)
+    - City: [Istanbul](city_name)
+    - City: [Karachi](city_name)
+    - City: [Buenos Aires](city_name)
+    - City: [Kolkata](city_name)
+    - City: [Kinshasa](city_name)
+    - City: [Manila](city_name)
+    - City: [Tianjin](city_name)
+    - City: [Rio de Janeiro](city_name)
+    - City: [Lahore](city_name)
+    - City: [Lima](city_name)
+    - City: [Bangalore](city_name)
+    - City: [London](city_name)
+    - City: [Bangkok](city_name)
+    - City: [Chennai](city_name)
+    - City: [New Taipei City](city_name)
+    - City: [Shenzhen](city_name)
+    - City: [Jakarta](city_name)
+    - City: [Nairobi](city_name)
+    - City: [Wuhan](city_name)
+    - City: [Hyderabad](city_name)
+    - City: [Hong Kong](city_name)
+    - City: [Hangzhou](city_name)
+    - City: [Ahmedabad](city_name)
+    - City: [Kuala Lumpur](city_name)
+    - City: [Paris](city_name)
+    - City: [Bogotá](city_name)
+    - City: [Johannesburg](city_name)
+    - City: [Baghdad](city_name)
+    - City: [Santiago](city_name)
+    - City: [Riyadh](city_name)
+    - City: [Madrid](city_name)
+    - City: [Houston](city_name)
+    - City: [Toronto](city_name)
+    - City: [Miami](city_name)
+    - City: [Singapore](city_name)
+    - City: [Berlin](city_name)
+    - City: [Athens](city_name)
+    - City: [Vienna](city_name)
+    - City: [Warsaw](city_name)
+
+- intent: information_about
+  examples: |
+    - Give me some information about a location.
+    - Tell me about an interesting place.
+    - Provide details about a city.
+    - What can you tell me about a specific place?
+    - Share some facts about a historical location.
+    - Provide information about an urban area.
+    - Share details about a destination.
+    - Tell me about a town.
+    - Provide insights into a particular spot.
+    - Share information about a region.
+    - Provide interesting facts about a location.
+    - Share details about a place.
+    - Provide insights into an area.
+    - Tell me about a specific destination.
+    - Provide information about a place.
+    - Share some facts about a unique spot.
+    - Share details about a cultural location.
+    - Provide insights into a landmark.
+    - Share information about an interesting spot.
+    - Provide interesting facts about a place.

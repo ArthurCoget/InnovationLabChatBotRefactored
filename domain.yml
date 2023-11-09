@@ -1,0 +1,77 @@
+version: '3.1'
+intents:
+- capabilities
+- find_time_zone
+- flight_data
+- goodbye
+- greet
+- looking_flights
+- timezones
+- information_about
+- cities
+- information_about
+
+entities:
+- start_place
+- goto_place
+- departure_date
+- return_date
+- target_timezone
+- city_name
+
+slots:
+  start_place:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: start_place
+  goto_place:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: goto_place
+  departure_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: departure_date
+  return_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: return_date
+  target_timezone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: target_timezone
+  city_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city_name
+actions:
+- utter_greet
+- utter_capabilities
+- utter_flight_format
+- action_get_flights
+- action_find_timezone
+responses:
+  utter_greet:
+  - text: Hello! How can I help you?
+  utter_goodbye:
+  - text: I hope I was helpfull, have a nice day.
+  utter_capabilities:
+  - text: "I can do a lot of things! Here are some subjects I can help you with: If you have a specific city in mind and would like to know its timezone and current time, please provide the name of the city, and I'll give you the relevant information(format: Continent/City), if you're interested in learning about a particular city, just let me know the city's name, and I can provide you with a brief summary of that city, if you want recommendations for activities to do in a specific city, please specify the city, and I can suggest various things to see and do in that location. WIP: I can help you looking for flights."
+  utter_flight_format:
+  - text: "I can help you with looking for flights, but for that I need some information. You need to provide me this information in this exact format: Departure: (departure_city) arrival: (city_of_arival). From: (departure_date) (Date Format: YYYY-mm-DD) to: (return_date) (Date Format: YYYY-mm-DD) Or Departure: (departure_city) arrival: (city_of_arival). From: (departure_date) (Date Format: YYYY-mm-DD) to: ('For Example: Departure: Los Angeles arrival: Paris. From: 2023-11-15 to: 2023-11-30')"
+  utter_looking_flights:
+  - text: I am looking up, this can take a momment. {start_place} to {goto_place}, from {departure_date} to {return_date}
+  utter_timezone_search_format:
+  - text: "Of witch city do you want to know the timezone? Please give me in this format: 'Timezone: Continent/City' (For example: 'Timezone: America/New_York')"
+  utter_timezone_lookingup:
+  - text: Give me a second to look it up the timezone for {target_timezone}.
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
