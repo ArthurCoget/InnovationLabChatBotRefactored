@@ -11,13 +11,6 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: Greetings_info
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: capabilities
-  - action: utter_capabilities
-
 - story: info_help_looking_for_flights
   steps:
   - intent: capabilities
@@ -53,3 +46,17 @@ stories:
     - intent: timezones
     - action: utter_timezone_lookingup
     - action: action_find_timezone
+
+- story: finding_information
+  steps:
+    - intent: information_about
+    - action: utter_information_format
+    - intent: cities
+    - action: utter_finding_information
+    - action: action_get_information
+
+- story: asked_point_of_interest
+  steps:
+    - intent: activities_about
+    - action: utter_finding_pois
+    - action: action_get_pois

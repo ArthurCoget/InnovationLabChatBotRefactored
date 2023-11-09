@@ -1,0 +1,19 @@
+Demo:
+	- Hi
+	- What can you do?
+	- Tell me about timezones
+	- Timezone: Asia/Tokyo
+	- Timezone: Africa/Abidjan
+	- With what can you help me?
+	- information about cities
+	- City: Paris 
+	- City: Brussels
+	- City: Tokyo
+	- What are you capable of?
+	- I want some activities in Tokyo 
+	- Recommend places in Paris
+	- Things I can ask you?
+	- Help me with looking for flight tickets
+	- Departure: Los Angeles arrival: Paris. From: 2023-11-15 to: 2023-11-30
+	- Look for flight tickets
+	- Departure: Brussels arrival: Madrid. From: 2023-11-15 to: 2023-12-12

@@ -9,7 +9,7 @@ intents:
 - timezones
 - information_about
 - cities
-- information_about
+- activities_about
 
 entities:
 - start_place
@@ -18,6 +18,7 @@ entities:
 - return_date
 - target_timezone
 - city_name
+- local_act
 
 slots:
   start_place:
@@ -50,12 +51,20 @@ slots:
     mappings:
       - type: from_entity
         entity: city_name
+        city_name:
+  local_act:  
+    type: text
+    mappings:
+      - type: from_entity
+        entity: local_act
 actions:
-- utter_greet
-- utter_capabilities
-- utter_flight_format
-- action_get_flights
-- action_find_timezone
+  - utter_greet
+  - utter_capabilities
+  - utter_flight_format
+  - action_get_flights
+  - action_find_timezone
+  - action_get_information
+  - action_get_pois
 responses:
   utter_greet:
   - text: Hello! How can I help you?
@@ -70,8 +79,14 @@ responses:
   utter_timezone_search_format:
   - text: "Of witch city do you want to know the timezone? Please give me in this format: 'Timezone: Continent/City' (For example: 'Timezone: America/New_York')"
   utter_timezone_lookingup:
-  - text: Give me a second to look it up the timezone for {target_timezone}.
-
+  - text: "Give me a second to look it up the timezone for {target_timezone}."
+  utter_information_format:
+  - text: "Give the city where you want the information of in this format. ('City: city_name')"
+  utter_finding_information:
+  - text: "Give me a second to look up some information for {city_name}."
+  utter_finding_pois:
+  - text: "Give me a second to look up some activities nearby {local_act}."
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

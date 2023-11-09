@@ -27,3 +27,14 @@ rules:
   steps:
     - intent: find_time_zone
     - action: utter_timezone_search_format
+
+- rule: give interest about pois give pois back
+  steps:
+    - intent: activities_about
+    - action: utter_finding_pois
+    - action: action_get_pois
+- rule: give city get information about that city
+  steps: 
+    - intent: cities
+    - action: utter_finding_information
+    - action: action_get_information    

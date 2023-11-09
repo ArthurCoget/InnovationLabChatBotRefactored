@@ -69,7 +69,7 @@ nlu:
     - Departure: [Barcelona](start_place) arrival: [New York](goto_place). From: [2023-11-28](departure_date) to: [2023-12-13](return_date)
     - Departure: [Singapore](start_place) arrival: [Bangkok](goto_place). From: [2023-12-15](departure_date) to: [2023-12-30](return_date)
     - Departure: [Los Angeles](start_place) arrival: [Paris](goto_place). From: [2023-11-15](departure_date) to: [2023-11-30](return_date)
-
+    - Departure: [Brussels](start_place) arrival: [Lima](goto_place). From: [2023-11-11](departure_date) to: [2023-12-12](return_date)
 - intent: find_time_zone
   examples: |
     - can you tell me the timezone?
@@ -82,6 +82,7 @@ nlu:
     - I require your assistance in locating a timezone.
     - Can you help me find information about a specific timezone?
     - Do you have the capability to tell me the current time?
+    - Do you have information about the timezones?
 - intent: timezones
   examples: |
     - Timezone: [North America/New York](target_timezone)
@@ -209,3 +210,26 @@ nlu:
     - Provide insights into a landmark.
     - Share information about an interesting spot.
     - Provide interesting facts about a place.
+
+- intent: activities_about
+  examples: |
+    - What are some points of interest in [Zurich](local_act)?
+    - Find out what's interesting in [Geneva](local_act).
+    - Recommend places to visit in [Kuala Lumpur](local_act).
+    - Tell me about the attractions in [Auckland](local_act).
+    - Share details on [Sao Paulo](local_act)'s famous sites.
+    - Discover [Riyadh](local_act)'s top tourist spots.
+    - Give me information on the best places to visit in [Jerusalem](local_act).
+    - Suggest some popular activities in [Amman](local_act).
+    - What can you recommend for sightseeing in [Nairobi](local_act).
+    - Find points of interest in [Singapore](local_act).
+    - Tell me about the famous places in [Bangkok](local_act).
+    - Share details about [Barcelona](local_act).
+    - Discover the best tourist spots in [San Francisco](local_act).
+    - Share information about [Amsterdam](local_act).
+    - Provide insights into [Istanbul](local_act).
+    - What are some points of interest in [Moscow](local_act)?
+    - Find out what's interesting in [Dublin](local_act).
+    - Recommend places to visit in [Stockholm](local_act).
+    - Tell me about the attractions in [Athens](local_act).
+    - Share details on [Copenhagen](local_act)'s famous sites.
